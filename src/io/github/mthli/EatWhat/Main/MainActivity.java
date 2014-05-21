@@ -2,10 +2,13 @@ package io.github.mthli.EatWhat.Main;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import io.github.mthli.EatWhat.About.AboutActivity;
 import io.github.mthli.EatWhat.R;
 
@@ -14,6 +17,8 @@ public class MainActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+
+        ImageView background = (ImageView) findViewById(R.id.main_background_image);
     }
 
     @Override

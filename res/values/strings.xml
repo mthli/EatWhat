@@ -2,6 +2,9 @@
 <resources>
     <!-- App -->
     <string name="app_name">EatWhat</string>
+
+    <!-- Main -->
+    <string name="main_background_image">Background image</string>
     
     <!-- Menu -->
     <string name="main_menu_about">About</string>

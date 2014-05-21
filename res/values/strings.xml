@@ -7,6 +7,7 @@
     <string name="main_background_image">Background image</string>
     
     <!-- Menu -->
+    <string name="main_menu_share">Share</string>
     <string name="main_menu_about">About</string>
 
     <!-- About -->

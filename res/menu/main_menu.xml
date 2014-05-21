@@ -2,6 +2,12 @@
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <item android:id="@+id/main_menu_share"
+          android:icon="@drawable/ic_action_share"
+          android:title="@string/main_menu_share"
+          android:showAsAction="always">
+    </item>
+
     <item android:id="@+id/main_menu_about"
           android:title="@string/main_menu_about"
           android:showAsAction="collapseActionView">

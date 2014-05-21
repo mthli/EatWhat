@@ -2,19 +2,30 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="io.github.mthli.EatWhat"
           android:versionCode="1"
-          android:versionName="1.0">
+          android:versionName="1.0.0">
 
     <uses-sdk android:minSdkVersion="14"/>
 
-    <application android:label="@string/app_name" android:icon="@drawable/ic_launcher">
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
-        <activity android:name="MainActivity"
+    <application android:label="@string/app_name"
+                 android:icon="@drawable/ic_launcher"
+                 android:theme="@android:style/Theme.Holo.Light"
+                 android:allowBackup="true">
+
+        <activity android:name=".Main.MainActivity"
                   android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        
+
+        <activity android:name=".About.AboutActivity"
+                  android:label="@string/about_label">
+        </activity>
+
     </application>
 </manifest>

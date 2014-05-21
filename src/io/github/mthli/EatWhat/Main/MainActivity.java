@@ -9,6 +9,8 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.media.AudioManager;
+import android.media.SoundPool;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.view.Menu;
@@ -22,6 +24,7 @@ import io.github.mthli.EatWhat.R;
 public class MainActivity extends Activity implements SensorEventListener {
     private ImageView background;
     private SensorManager sensorManager;
+    private SoundPool soundPool;
     private Vibrator vibrator;
 
     @Override
@@ -32,6 +35,9 @@ public class MainActivity extends Activity implements SensorEventListener {
         background = (ImageView) findViewById(R.id.main_background_image);
 
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+
+        soundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 5);
+        
         vibrator = (Vibrator) getSystemService(Service.VIBRATOR_SERVICE);
     }
 
@@ -62,13 +68,13 @@ public class MainActivity extends Activity implements SensorEventListener {
         float[] values= sensorEvent.values;
 
         if (sensorType == Sensor.TYPE_ACCELEROMETER) {
-            if ((Math.abs(values[0]) > 17) || Math.abs(values[1]) > 17 || Math.abs(values[2]) > 17){
+            if ((Math.abs(values[0]) > 19) || Math.abs(values[1]) > 19 || Math.abs(values[2]) > 19){
                 Toast.makeText(
                         MainActivity.this,
                         "sjahdisygdsaig",
                         Toast.LENGTH_SHORT
                 ).show();
-                vibrator.vibrate(500);
+                vibrator.vibrate(250);
             }
         }
     }

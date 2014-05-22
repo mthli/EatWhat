@@ -132,7 +132,15 @@ public class MainActivity extends Activity implements SensorEventListener, Actio
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         switch (menuItem.getItemId()) {
             case R.id.main_menu_share:
-                /* Do something */
+                /*
+                 * Need check share information is existing,
+                 * and what app should share to, tencent, renren, and other?
+                 */
+                Intent intent_share = new Intent(Intent.ACTION_SEND);
+                intent_share.setType("text/plain");
+                intent_share.putExtra(Intent.EXTRA_SUBJECT, "Share");
+                intent_share.putExtra(Intent.EXTRA_TEXT, "dhusga");
+                startActivity(Intent.createChooser(intent_share, "Share"));
                 break;
             case R.id.main_menu_background:
                 /* Do something */

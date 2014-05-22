@@ -32,7 +32,6 @@ public class MainActivity extends Activity implements SensorEventListener, Actio
     private SensorManager sensorManager;
 
     private SoundPool soundPool;
-    private Vibrator vibrator;
 
     private PopupWindow popupWindow;
     private View popupView;
@@ -75,7 +74,6 @@ public class MainActivity extends Activity implements SensorEventListener, Actio
 
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         soundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 5);
-        vibrator = (Vibrator) getSystemService(Service.VIBRATOR_SERVICE);
     }
 
     @Override
@@ -119,8 +117,6 @@ public class MainActivity extends Activity implements SensorEventListener, Actio
 
                 popupWindow.setAnimationStyle(R.style.popup_show);
                 popupWindow.showAtLocation(background, Gravity.CENTER, 0, 200);
-
-                vibrator.vibrate(250);
             }
         }
     }

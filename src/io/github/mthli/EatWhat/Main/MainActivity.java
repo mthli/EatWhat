@@ -116,14 +116,9 @@ public class MainActivity extends Activity implements SensorEventListener, Actio
                 if (popupWindow.isShowing()) {
                     popupWindow.dismiss();
                 }
-
+                popupWindow.setAnimationStyle(R.style.popup_show_from_right);
                 popupWindow.showAtLocation(background, Gravity.CENTER, 20, 20);
 
-                Toast.makeText(
-                        MainActivity.this,
-                        "sjahdisygdsaig",
-                        Toast.LENGTH_SHORT
-                ).show();
                 vibrator.vibrate(250);
             }
         }

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="popup_show_from_left">
+        <item name="android:windowEnterAnimation">@anim/popup_show_from_left</item>
+    </style>
+
+    <style name="popup_show_from_right">
+        <item name="android:windowEnterAnimation">@anim/popup_show_from_right</item>
+    </style>
+
+</resources>

@@ -7,7 +7,6 @@
 
     <ImageView android:id="@+id/main_background_image"
                android:contentDescription="@string/main_background_image"
-               android:src="@drawable/background"
                android:layout_width="match_parent"
                android:layout_height="match_parent"
                android:scaleType="centerCrop">

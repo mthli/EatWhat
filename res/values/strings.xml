@@ -8,6 +8,7 @@
     
     <!-- Menu -->
     <string name="main_menu_share">Share</string>
+    <string name="main_menu_background">Background</string>
     <string name="main_menu_about">About</string>
 
     <!-- About -->

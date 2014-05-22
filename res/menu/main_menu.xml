@@ -8,6 +8,11 @@
           android:showAsAction="always">
     </item>
 
+    <item android:id="@+id/main_menu_background"
+          android:title="@string/main_menu_background"
+          android:showAsAction="collapseActionView">
+    </item>
+
     <item android:id="@+id/main_menu_about"
           android:title="@string/main_menu_about"
           android:showAsAction="collapseActionView">

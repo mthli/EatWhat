@@ -3,7 +3,9 @@ package io.github.mthli.EatWhat.Main;
 import android.app.Activity;
 import android.app.Service;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -23,7 +25,11 @@ import io.github.mthli.EatWhat.R;
 
 public class MainActivity extends Activity implements SensorEventListener {
     private ImageView background;
+    private Bitmap bitmap;
+    private SharedPreferences sharedPreferences;
+
     private SensorManager sensorManager;
+
     private SoundPool soundPool;
     private Vibrator vibrator;
 
@@ -32,7 +38,15 @@ public class MainActivity extends Activity implements SensorEventListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
+        sharedPreferences = getSharedPreferences("background", MODE_PRIVATE);
+        String path = sharedPreferences.getString("background", null);
         background = (ImageView) findViewById(R.id.main_background_image);
+        if (path != null) {
+            bitmap = BitmapFactory.decodeFile(path);
+            background.setImageBitmap(bitmap);
+        } else {
+            background.setImageResource(R.drawable.background);
+        }
 
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
 

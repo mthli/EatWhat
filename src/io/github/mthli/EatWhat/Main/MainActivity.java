@@ -2,14 +2,11 @@ package io.github.mthli.EatWhat.Main;
 
 import android.app.ActionBar;
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.Service;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.drawable.ColorDrawable;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -22,7 +19,6 @@ import android.view.*;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
-import android.widget.Toast;
 
 import io.github.mthli.EatWhat.About.AboutActivity;
 import io.github.mthli.EatWhat.R;
@@ -70,7 +66,7 @@ public class MainActivity extends Activity implements SensorEventListener, Actio
             bitmap = BitmapFactory.decodeFile(path);
             background.setImageBitmap(bitmap);
         } else {
-            background.setImageResource(R.drawable.background);
+            background.setImageResource(R.drawable.main_background);
         }
 
         popupView = getLayoutInflater().inflate(R.layout.popup, null);
@@ -122,7 +118,7 @@ public class MainActivity extends Activity implements SensorEventListener, Actio
                 }
 
                 popupWindow.setAnimationStyle(R.style.popup_show);
-                popupWindow.showAtLocation(background, Gravity.CENTER, 20, 20);
+                popupWindow.showAtLocation(background, Gravity.CENTER, 0, 200);
 
                 vibrator.vibrate(250);
             }

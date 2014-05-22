@@ -11,4 +11,8 @@
 
     <solid android:color="@android:color/background_light" />
 
+    <stroke android:width="2dp"
+            android:color="@android:color/holo_blue_dark">
+    </stroke>
+
 </shape>

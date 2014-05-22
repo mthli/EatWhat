@@ -7,16 +7,16 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DBAction {
-    private DBHelper dbHelper;
+public class RDBAction {
+    private RDBHelper rdbHelper;
     private SQLiteDatabase database;
 
     public void openDatabase() throws SQLException {
-            database = dbHelper.getReadableDatabase();
+            database = rdbHelper.getReadableDatabase();
     }
 
     public void closeDatabase() {
-        dbHelper.close();
+        rdbHelper.close();
     }
 
     public List<Restaurant> restaurantList() {

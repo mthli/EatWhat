@@ -4,11 +4,11 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-public class DBHelper extends SQLiteOpenHelper {
+public class RDBHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "restaurant.db";
     private static final int DATABASE_VERSION = 1;
 
-    public DBHelper(Context context) {
+    public RDBHelper(Context context) {
         super(
                 context,
                 DATABASE_NAME,

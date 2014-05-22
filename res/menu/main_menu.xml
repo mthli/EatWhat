@@ -13,6 +13,11 @@
           android:showAsAction="collapseActionView">
     </item>
 
+    <item android:id="@+id/main_menu_usual"
+          android:title="@string/main_menu_usual"
+          android:showAsAction="collapseActionView">
+    </item>
+
     <item android:id="@+id/main_menu_about"
           android:title="@string/main_menu_about"
           android:showAsAction="collapseActionView">

@@ -7,8 +7,11 @@
     <string name="main_background_image">Background image</string>
     
     <!-- Menu -->
+    <string name="main_dropdown_random">Random</string>
+    <string name="main_dropdown_usual">Usual</string>
     <string name="main_menu_share">Share</string>
     <string name="main_menu_background">Background</string>
+    <string name="main_menu_usual">Add Usual</string>
     <string name="main_menu_about">About</string>
 
     <!-- About -->

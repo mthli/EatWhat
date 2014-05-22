@@ -1,12 +1,12 @@
 package io.github.mthli.EatWhat.Main;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.app.Service;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -15,30 +15,51 @@ import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
 import android.os.Vibrator;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
+import android.view.*;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.PopupWindow;
 import android.widget.Toast;
+
 import io.github.mthli.EatWhat.About.AboutActivity;
 import io.github.mthli.EatWhat.R;
 
-public class MainActivity extends Activity implements SensorEventListener {
+public class MainActivity extends Activity implements SensorEventListener, ActionBar.OnNavigationListener {
     private ImageView background;
     private Bitmap bitmap;
     private SharedPreferences sharedPreferences;
+    private SharedPreferences.Editor editor;
 
     private SensorManager sensorManager;
 
     private SoundPool soundPool;
     private Vibrator vibrator;
+    private PopupWindow popupWindow;
+    private View popupView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        sharedPreferences = getSharedPreferences("background", MODE_PRIVATE);
+        ActionBar actionBar = getActionBar();
+        actionBar.setDisplayShowTitleEnabled(false);
+        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
+        actionBar.setListNavigationCallbacks(
+                new ArrayAdapter<String>(
+                        MainActivity.this,
+                        android.R.layout.simple_list_item_1,
+                        android.R.id.text1,
+                        new String[] {
+                                getString(R.string.main_dropdown_random),
+                                getString(R.string.main_dropdown_usual)
+                        }
+                ),
+                this
+        );
+
+        sharedPreferences = getSharedPreferences("setting", MODE_PRIVATE);
+        editor = sharedPreferences.edit();
         String path = sharedPreferences.getString("background", null);
         background = (ImageView) findViewById(R.id.main_background_image);
         if (path != null) {
@@ -48,11 +69,19 @@ public class MainActivity extends Activity implements SensorEventListener {
             background.setImageResource(R.drawable.background);
         }
 
-        sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+        popupView = getLayoutInflater().inflate(R.layout.popup, null);
+        popupWindow = new PopupWindow(popupView, WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT);
 
+        sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         soundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 5);
-        
         vibrator = (Vibrator) getSystemService(Service.VIBRATOR_SERVICE);
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(int position, long id) {
+        editor.putInt("dropdown", position);
+        editor.commit();
+        return true;
     }
 
     @Override
@@ -83,6 +112,13 @@ public class MainActivity extends Activity implements SensorEventListener {
 
         if (sensorType == Sensor.TYPE_ACCELEROMETER) {
             if ((Math.abs(values[0]) > 19) || Math.abs(values[1]) > 19 || Math.abs(values[2]) > 19){
+                /* Do something */
+                if (popupWindow.isShowing()) {
+                    popupWindow.dismiss();
+                }
+
+                popupWindow.showAtLocation(background, Gravity.CENTER, 20, 20);
+
                 Toast.makeText(
                         MainActivity.this,
                         "sjahdisygdsaig",
@@ -104,6 +140,12 @@ public class MainActivity extends Activity implements SensorEventListener {
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         switch (menuItem.getItemId()) {
             case R.id.main_menu_share:
+                /* Do something */
+                break;
+            case R.id.main_menu_background:
+                /* Do something */
+                break;
+            case R.id.main_menu_usual:
                 /* Do something */
                 break;
             case R.id.main_menu_about:

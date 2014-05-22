@@ -2,11 +2,14 @@ package io.github.mthli.EatWhat.Main;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Service;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.ColorDrawable;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -34,6 +37,7 @@ public class MainActivity extends Activity implements SensorEventListener, Actio
 
     private SoundPool soundPool;
     private Vibrator vibrator;
+
     private PopupWindow popupWindow;
     private View popupView;
 
@@ -71,6 +75,7 @@ public class MainActivity extends Activity implements SensorEventListener, Actio
 
         popupView = getLayoutInflater().inflate(R.layout.popup, null);
         popupWindow = new PopupWindow(popupView, WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT);
+
 
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         soundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 5);
@@ -112,11 +117,11 @@ public class MainActivity extends Activity implements SensorEventListener, Actio
 
         if (sensorType == Sensor.TYPE_ACCELEROMETER) {
             if ((Math.abs(values[0]) > 19) || Math.abs(values[1]) > 19 || Math.abs(values[2]) > 19){
-                /* Do something */
                 if (popupWindow.isShowing()) {
                     popupWindow.dismiss();
                 }
-                popupWindow.setAnimationStyle(R.style.popup_show_from_right);
+
+                popupWindow.setAnimationStyle(R.style.popup_show);
                 popupWindow.showAtLocation(background, Gravity.CENTER, 20, 20);
 
                 vibrator.vibrate(250);

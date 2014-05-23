@@ -18,7 +18,7 @@
     <string name="share_title">Share</string>
 
     <!-- Add Usual -->
-    <string name="usual_label">Add usual</string>
+    <string name="usual_label">Usual</string>
     <string name="usual_edit_text_restaurant_hint">Restaurant</string>
     <string name="usual_edit_text_path_hint">Path</string>
     <string name="usual_menu_add">Add</string>

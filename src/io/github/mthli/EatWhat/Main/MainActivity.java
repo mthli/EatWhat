@@ -23,7 +23,7 @@ import android.widget.PopupWindow;
 
 import android.widget.Toast;
 import io.github.mthli.EatWhat.About.AboutActivity;
-import io.github.mthli.EatWhat.AddUsual.AddUsualActivity;
+import io.github.mthli.EatWhat.Usual.UsualActivity;
 import io.github.mthli.EatWhat.R;
 
 import java.io.FileNotFoundException;
@@ -155,7 +155,7 @@ public class MainActivity extends Activity implements SensorEventListener, Actio
                 startActivityForResult(intent_background, 1);
                 break;
             case R.id.main_menu_usual:
-                Intent intent_add_usual = new Intent(MainActivity.this, AddUsualActivity.class);
+                Intent intent_add_usual = new Intent(MainActivity.this, UsualActivity.class);
                 startActivity(intent_add_usual);
                 return true;
             case R.id.main_menu_about:

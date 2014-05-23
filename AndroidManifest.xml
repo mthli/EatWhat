@@ -25,7 +25,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".AddUsual.AddUsualActivity"
+        <activity android:name=".Usual.UsualActivity"
                   android:label="@string/usual_label">
         </activity>
 

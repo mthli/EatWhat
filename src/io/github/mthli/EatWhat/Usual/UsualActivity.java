@@ -9,15 +9,12 @@ import android.view.MenuItem;
 import io.github.mthli.EatWhat.R;
 
 public class UsualActivity extends Activity {
-    private ActionBar actionBar;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.usual);
-
-        actionBar = getActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
+        getActionBar().setDisplayHomeAsUpEnabled(true);
 
         /* SimpleAdapter and Database */
     }

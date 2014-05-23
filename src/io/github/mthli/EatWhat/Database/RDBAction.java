@@ -1,5 +1,6 @@
 package io.github.mthli.EatWhat.Database;
 
+import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
@@ -10,6 +11,10 @@ import java.util.List;
 public class RDBAction {
     private RDBHelper rdbHelper;
     private SQLiteDatabase database;
+
+    public void RDBAction(Context context) {
+        rdbHelper = new RDBHelper(context);
+    }
 
     public void openDatabase() throws SQLException {
             database = rdbHelper.getReadableDatabase();
@@ -23,7 +28,7 @@ public class RDBAction {
         List<Restaurant> restaurants = new ArrayList<Restaurant>();
         Cursor cursor = database.query(
                 Restaurant.TABLE,
-                new String[]{
+                new String[] {
                         Restaurant.RESTAURANT,
                         Restaurant.PATH
                 },

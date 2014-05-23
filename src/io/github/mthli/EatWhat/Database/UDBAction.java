@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +17,7 @@ public class UDBAction {
         udbHelper = new UDBHelper(context);
     }
 
-    public void openDatabase(boolean rw) {
+    public void openDatabase(boolean rw) throws SQLException {
         if (rw) {
             database = udbHelper.getWritableDatabase();
         } else {
@@ -28,14 +29,14 @@ public class UDBAction {
         udbHelper.close();
     }
 
-    public void newRepo(Usual usual) {
+    public void newUsual(Usual usual) {
         ContentValues values = new ContentValues();
         values.put(Usual.RESTAURANT, usual.getRestaurant());
         values.put(Usual.PATH, usual.getPath());
         database.insert(Usual.TABLE, null, values);
     }
 
-    public void deleteRepo(Usual usual) {
+    public void deleteUsual(Usual usual) {
         database.delete(
                 Usual.TABLE,
                 Usual.RESTAURANT + "=?",

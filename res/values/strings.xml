@@ -14,6 +14,9 @@
     <string name="main_menu_usual">Add Usual</string>
     <string name="main_menu_about">About</string>
 
+    <!-- Share -->
+    <string name="share_title">Share</string>
+
     <!-- About -->
     <string name="about_label">About</string>
     <string name="about_title_author">Author</string>
@@ -26,5 +29,9 @@
     <string name="about_content_version">1.0.0</string>
     <string name="about_content_homepage">https://github.com/mthli/EatWhat</string>
     <string name="about_content_license">Mozilla Public License Version 2.0</string>
+
+    <!-- Error -->
+    <string name="error_background_init">Custom Background No Found, Restore Factory Settings</string>
+    <string name="error_background_404">Image No Found</string>
     
 </resources>

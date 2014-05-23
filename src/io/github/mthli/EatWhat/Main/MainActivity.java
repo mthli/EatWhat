@@ -2,7 +2,6 @@ package io.github.mthli.EatWhat.Main;
 
 import android.app.ActionBar;
 import android.app.Activity;
-import android.app.Service;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -16,7 +15,6 @@ import android.media.AudioManager;
 import android.media.SoundPool;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Vibrator;
 import android.provider.MediaStore;
 import android.view.*;
 import android.widget.ArrayAdapter;
@@ -25,6 +23,7 @@ import android.widget.PopupWindow;
 
 import android.widget.Toast;
 import io.github.mthli.EatWhat.About.AboutActivity;
+import io.github.mthli.EatWhat.AddUsual.AddUsualActivity;
 import io.github.mthli.EatWhat.R;
 
 import java.io.FileNotFoundException;
@@ -36,7 +35,6 @@ public class MainActivity extends Activity implements SensorEventListener, Actio
     private SharedPreferences.Editor editor;
 
     private SensorManager sensorManager;
-
     private SoundPool soundPool;
 
     private PopupWindow popupWindow;
@@ -65,7 +63,7 @@ public class MainActivity extends Activity implements SensorEventListener, Actio
 
         sharedPreferences = getSharedPreferences("setting", MODE_PRIVATE);
         editor = sharedPreferences.edit();
-        
+
         String path = sharedPreferences.getString("bitmap_background", null);
         background = (ImageView) findViewById(R.id.main_background_image);
         if (path != null) {
@@ -78,8 +76,8 @@ public class MainActivity extends Activity implements SensorEventListener, Actio
         popupView = getLayoutInflater().inflate(R.layout.popup, null);
         popupWindow = new PopupWindow(popupView, WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT);
 
-
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+        /* Do something */
         soundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 5);
     }
 
@@ -121,7 +119,7 @@ public class MainActivity extends Activity implements SensorEventListener, Actio
                 if (popupWindow.isShowing()) {
                     popupWindow.dismiss();
                 }
-
+                /* Do something */
                 popupWindow.setAnimationStyle(R.style.popup_show);
                 popupWindow.showAtLocation(background, Gravity.CENTER, 0, 200);
             }
@@ -157,8 +155,9 @@ public class MainActivity extends Activity implements SensorEventListener, Actio
                 startActivityForResult(intent_background, 1);
                 break;
             case R.id.main_menu_usual:
-                /* Do something */
-                break;
+                Intent intent_add_usual = new Intent(MainActivity.this, AddUsualActivity.class);
+                startActivity(intent_add_usual);
+                return true;
             case R.id.main_menu_about:
                 Intent intent_about = new Intent(MainActivity.this, AboutActivity.class);
                 startActivity(intent_about);

@@ -11,11 +11,18 @@
     <string name="main_dropdown_usual">Usual</string>
     <string name="main_menu_share">Share</string>
     <string name="main_menu_background">Background</string>
-    <string name="main_menu_usual">Add Usual</string>
+    <string name="main_menu_usual">Usual</string>
     <string name="main_menu_about">About</string>
 
     <!-- Share -->
     <string name="share_title">Share</string>
+
+    <!-- Add Usual -->
+    <string name="usual_label">Add usual</string>
+    <string name="usual_edit_text_restaurant_hint">Restaurant</string>
+    <string name="usual_edit_text_path_hint">Path</string>
+    <string name="usual_menu_add">Add</string>
+    <string name="usual_menu_delete">Delete</string>
 
     <!-- About -->
     <string name="about_label">About</string>

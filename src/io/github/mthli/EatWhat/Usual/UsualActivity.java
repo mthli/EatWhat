@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.*;
 import io.github.mthli.EatWhat.Database.UDBAction;
 import io.github.mthli.EatWhat.Database.Usual;
@@ -21,7 +22,8 @@ import java.util.Map;
 
 public class UsualActivity extends Activity {
     private ListView listView;
-    private SimpleAdapter simpleAdapter;
+    private List<UsualItem> usualItems;
+    private UsualAdapter usualAdapter;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -31,8 +33,8 @@ public class UsualActivity extends Activity {
 
         refreshList();
         listView = (ListView) findViewById(R.id.usual);
-        listView.setAdapter(simpleAdapter);
-        simpleAdapter.notifyDataSetChanged();
+        listView.setAdapter(usualAdapter);
+        usualAdapter.notifyDataSetChanged();
     }
 
     @Override
@@ -78,8 +80,8 @@ public class UsualActivity extends Activity {
                                         }
                                         udbAction.closeDatabase();
                                         refreshList();
-                                        listView.setAdapter(simpleAdapter);
-                                        simpleAdapter.notifyDataSetChanged();
+                                        listView.setAdapter(usualAdapter);
+                                        usualAdapter.notifyDataSetChanged();
                                     }
                                 }
                         ).setNegativeButton(
@@ -102,30 +104,24 @@ public class UsualActivity extends Activity {
     public void refreshList() {
         UDBAction udbAction = new UDBAction(UsualActivity.this);
         try {
+            usualItems.clear();
             udbAction.openDatabase(true);
             List<Usual> usualList = udbAction.usualList();
 
-            ArrayList<String> restaurants = new ArrayList<String>();
-            ArrayList<String> paths = new ArrayList<String>();
-            for (int i = 0; i < usualList.size(); i++) {
-                restaurants.add(usualList.get(i).getRestaurant());
-                paths.add(usualList.get(i).getPath());
-            }
 
-            List<Map<String, String>> usuals = new ArrayList<Map<String, String>>();
             for (int i = 0; i < usualList.size(); i++) {
-                Map<String, String> usual = new HashMap<String, String>();
-                usual.put("restaurant", restaurants.get(i));
-                usual.put("path", paths.get(i));
-                usuals.add(usual);
+                usualItems.add(
+                        new UsualItem(
+                                usualList.get(i).getRestaurant(),
+                                usualList.get(i).getPath(),
+                                new ImageButton(this)
+                        )
+                );
             }
-
-            simpleAdapter = new SimpleAdapter(
-                    UsualActivity.this,
-                    usuals,
+            usualAdapter = new UsualAdapter(
+                    this,
                     R.layout.usual_item,
-                    new String[] {"restaurant", "path"},
-                    new int[] {R.id.usual_item_restaurant, R.id.usual_item_path}
+                    usualItems
             );
         } catch (SQLException s) {
             Toast.makeText(

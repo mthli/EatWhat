@@ -3,11 +3,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="horizontal"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:descendantFocusability="blocksDescendants">
 
     <LinearLayout android:orientation="vertical"
                   android:layout_width="wrap_content"
                   android:layout_height="match_parent"
+                  android:gravity="left"
                   android:paddingLeft="15dp">
 
         <TextView android:id="@+id/usual_item_restaurant"
@@ -27,16 +29,23 @@
                   android:singleLine="true"
                   android:ellipsize="start">
         </TextView>
-        
+
     </LinearLayout>
 
-    <ImageButton android:id="@+id/usual_item_delete"
-                 android:contentDescription="@string/usual_menu_delete"
-                 android:layout_width="wrap_content"
-                 android:layout_height="match_parent"
-                 android:layout_gravity="center_horizontal"
-                 android:src="@drawable/ic_action_delete"
-                 android:background="#00000000"
-                 android:paddingRight="10dp">
-    </ImageButton>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:gravity="right"
+                  android:paddingRight="15dp">
+
+        <ImageButton android:id="@+id/usual_item_delete"
+                     android:contentDescription="@string/usual_menu_delete"
+                     android:layout_width="wrap_content"
+                     android:layout_height="match_parent"
+                     android:layout_gravity="center_horizontal"
+                     android:src="@drawable/ic_action_delete"
+                     android:background="#00000000">
+        </ImageButton>
+
+    </LinearLayout>
+
 </LinearLayout>

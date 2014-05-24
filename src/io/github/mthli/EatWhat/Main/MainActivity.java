@@ -190,17 +190,11 @@ public class MainActivity extends Activity implements SensorEventListener, Actio
                         udbAction.openDatabase(false);
                         List<Usual> usualList = udbAction.usualList();
                         if (usualList.size() == 0) {
-
-
-                            ///////////////
                             Toast.makeText(
                                     MainActivity.this,
                                     getString(R.string.warning_usual_404),
                                     Toast.LENGTH_SHORT
                             ).show();
-                            /////////////////
-
-
                         } else {
                             Random random = new Random();
                             int getRandom = random.nextInt(usualList.size());
@@ -249,18 +243,11 @@ public class MainActivity extends Activity implements SensorEventListener, Actio
                 textView = (TextView) popupView.findViewById(R.id.popup_path);
                 CharSequence getPath = textView.getText();
                 if (getRestaurant.length() == 0 && getPath.length() == 0) {
-
-
-                    ///////////
                     Toast.makeText(
                             MainActivity.this,
                             getString(R.string.warning_share_void),
                             Toast.LENGTH_SHORT
                     ).show();
-                    ////////////
-
-
-
                     break;
                 } else {
                     String share = getString(R.string.share_restaurant)

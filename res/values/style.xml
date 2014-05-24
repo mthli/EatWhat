@@ -5,4 +5,12 @@
         <item name="android:windowEnterAnimation">@anim/popup_show</item>
     </style>
 
+    <style name="popup_show_from_left">
+        <item name="android:windowEnterAnimation">@anim/popup_show_from_left</item>
+    </style>
+
+    <style name="popup_show_from_right">
+        <item name="android:windowEnterAnimation">@anim/popup_show_from_right</item>
+    </style>
+
 </resources>

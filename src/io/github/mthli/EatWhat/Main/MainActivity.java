@@ -175,11 +175,7 @@ public class MainActivity extends Activity implements SensorEventListener, Actio
                             textView.setText(restaurant.getRestaurant());
                             textView = (TextView) popupView.findViewById(R.id.popup_path);
                             textView.setText(restaurant.getPath());
-                            if (values[0] < 0) {
-                                popupWindow.setAnimationStyle(R.style.popup_show_from_right);
-                            } else {
-                                popupWindow.setAnimationStyle(R.style.popup_show_from_left);
-                            }
+                            popupWindow.setAnimationStyle(R.style.popup_show);
                             popupWindow.showAtLocation(background, Gravity.CENTER, 0, 200);
                         }
                     } catch (SQLException s) {
@@ -207,11 +203,7 @@ public class MainActivity extends Activity implements SensorEventListener, Actio
                             textView.setText(usual.getRestaurant());
                             textView = (TextView) popupView.findViewById(R.id.popup_path);
                             textView.setText(usual.getPath());
-                            if (values[0] < 0) {
-                                popupWindow.setAnimationStyle(R.style.popup_show_from_right);
-                            } else {
-                                popupWindow.setAnimationStyle(R.style.popup_show_from_left);
-                            }
+                            popupWindow.setAnimationStyle(R.style.popup_show);
                             popupWindow.showAtLocation(background, Gravity.CENTER, 0, 200);
                         }
                     } catch (SQLException s) {

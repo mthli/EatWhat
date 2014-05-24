@@ -13,4 +13,8 @@
         <item name="android:windowEnterAnimation">@anim/popup_show_from_right</item>
     </style>
 
+    <style name="popup_show_from_bottom">
+        <item name="android:windowEnterAnimation">@anim/popup_show_from_bottom</item>
+    </style>
+
 </resources>

@@ -35,12 +35,12 @@
     <!-- About -->
     <string name="about_label">关于</string>
     <string name="about_title_author">作者</string>
-    <string name="about_title_thanks">感谢</string>
+    <string name="about_title_thanks">招募</string>
     <string name="about_title_version">版本</string>
     <string name="about_title_homepage">主页</string>
     <string name="about_title_license">协议</string>
-    <string name="about_content_author">李明亮 @mth_li</string>
-    <string name="about_content_thanks">小型スーパーメンw @zfh_kiki</string>
+    <string name="about_content_author">MatthewLee &lt;matthewlee0725@gmail.com&gt;</string>
+    <string name="about_content_thanks">我需要一个UI设计师，乃们也看到这个应用的风格实在是太混乱了！</string>
     <string name="about_content_version">1.0.0</string>
     <string name="about_content_homepage">https://github.com/mthli/EatWhat</string>
     <string name="about_content_license">Mozilla Public License Version 2.0</string>

@@ -3,8 +3,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_gravity="center"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
               android:background="@drawable/popup_background">
 
     <TextView android:id="@+id/popup_restaurant"
@@ -15,6 +15,7 @@
               android:paddingRight="15dp"
               android:paddingTop="10dp"
               android:textSize="30sp"
+              android:textColor="#FFFFFF"
               android:text="TITLE"
               android:maxLines="2">
     </TextView>
@@ -27,6 +28,7 @@
               android:paddingRight="15dp"
               android:paddingBottom="10dp"
               android:textSize="15sp"
+              android:textColor="#FFFFFF"
               android:text="CONTENT"
               android:maxLines="2">
     </TextView>

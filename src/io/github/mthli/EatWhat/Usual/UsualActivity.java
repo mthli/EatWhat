@@ -69,7 +69,9 @@ public class UsualActivity extends Activity {
                                             Usual usual = new Usual();
                                             usual.setRestaurant(restaurant);
                                             usual.setPath(path);
-                                            udbAction.newUsual(usual);
+                                            if (!udbAction.checkUsual(usual)) {
+                                                udbAction.newUsual(usual);
+                                            }
                                         } catch (SQLException s) {
                                             Toast.makeText(
                                                     UsualActivity.this,

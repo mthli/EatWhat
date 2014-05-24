@@ -36,6 +36,27 @@ public class UDBAction {
         database.insert(Usual.TABLE, null, values);
     }
 
+    public boolean checkUsual(Usual usual) {
+        Cursor cursor = database.query(
+                Usual.TABLE,
+                new String[] {Usual.RESTAURANT, Usual.PATH},
+                Usual.RESTAURANT + " =?" + " AND " + Usual.PATH + " =?",
+                new String[] {usual.getRestaurant(), usual.getPath()},
+                null,
+                null,
+                null
+        );
+        if (cursor != null) {
+            boolean result = false;
+            if (cursor.moveToFirst()) {
+                result = true;
+            }
+            cursor.close();
+            return result;
+        }
+        return false;
+    }
+
     public void deleteUsual(Usual usual) {
         database.delete(
                 Usual.TABLE,

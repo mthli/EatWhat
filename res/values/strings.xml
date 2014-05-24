@@ -50,6 +50,7 @@
     <string name="error_unknown">Unknown Bug</string>
     <string name="error_background_init">Custom Background No Found, Restore Factory Settings</string>
     <string name="error_background_404">Image No Found</string>
+    <string name="error_database_copy">Init Database Failed</string>
     <string name="error_database_open">Database Open Failed</string>
     
 </resources>

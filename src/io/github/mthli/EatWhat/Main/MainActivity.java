@@ -3,6 +3,7 @@ package io.github.mthli.EatWhat.Main;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
@@ -17,6 +18,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.*;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.*;
 
 import io.github.mthli.EatWhat.About.AboutActivity;
@@ -27,7 +29,7 @@ import io.github.mthli.EatWhat.Database.Usual;
 import io.github.mthli.EatWhat.Usual.UsualActivity;
 import io.github.mthli.EatWhat.R;
 
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Random;
@@ -48,6 +50,33 @@ public class MainActivity extends Activity implements SensorEventListener, Actio
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+
+        String DB_PATH = MainActivity.this.getFilesDir().getParent() + "/databases/";
+        String DB_NAME = "restaurant.db";
+        if (!(new File(DB_PATH + DB_NAME)).exists()) {
+            File file = new File(DB_PATH);
+            if (!file.exists()) {
+                file.mkdir();
+            }
+            try {
+                InputStream inputStream = getBaseContext().getAssets().open(DB_NAME);
+                OutputStream outputStream = new FileOutputStream(DB_PATH + DB_NAME);
+                byte[] buffer = new byte[1024];
+                int length;
+                while ((length = inputStream.read(buffer)) > 0) {
+                    outputStream.write(buffer, 0, length);
+                }
+                outputStream.flush();
+                outputStream.close();
+                inputStream.close();
+            } catch (Exception e) {
+                Toast.makeText(
+                        MainActivity.this,
+                        getString(R.string.error_database_copy),
+                        Toast.LENGTH_SHORT
+                ).show();
+            }
+        }
 
         ActionBar actionBar = getActionBar();
         actionBar.setDisplayShowTitleEnabled(false);

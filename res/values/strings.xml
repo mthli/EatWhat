@@ -42,7 +42,12 @@
     <string name="about_content_homepage">https://github.com/mthli/EatWhat</string>
     <string name="about_content_license">Mozilla Public License Version 2.0</string>
 
+    <!-- Warning -->
+    <string name="waring_restaurant_void">Restaurant All Shutdown</string>
+    <string name="warning_usual_404">You Need To Add Your Usual First</string>
+
     <!-- Error -->
+    <string name="error_unknown">Unknown Bug</string>
     <string name="error_background_init">Custom Background No Found, Restore Factory Settings</string>
     <string name="error_background_404">Image No Found</string>
     <string name="error_database_open">Database Open Failed</string>

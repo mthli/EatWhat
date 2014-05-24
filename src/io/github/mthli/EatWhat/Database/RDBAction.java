@@ -12,7 +12,7 @@ public class RDBAction {
     private RDBHelper rdbHelper;
     private SQLiteDatabase database;
 
-    public void RDBAction(Context context) {
+    public RDBAction(Context context) {
         rdbHelper = new RDBHelper(context);
     }
 

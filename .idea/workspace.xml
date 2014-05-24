@@ -23,12 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1547664c-d466-4479-b532-cc3f60b3da01" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ic_launcher.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/ic_launcher.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/ic_launcher.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xxhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/res/drawable-xxhdpi/ic_launcher.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/io/github/mthli/EatWhat/Main/MainActivity.java" afterPath="$PROJECT_DIR$/src/io/github/mthli/EatWhat/Main/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/io/github/mthli/EatWhat/Database/RDBAction.java" afterPath="$PROJECT_DIR$/src/io/github/mthli/EatWhat/Database/RDBAction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/popup.xml" afterPath="$PROJECT_DIR$/res/layout/popup.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable/popup_background.xml" afterPath="$PROJECT_DIR$/res/drawable/popup_background.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="EatWhat.iws" />
@@ -91,41 +89,73 @@
     <ui_properties converted="true" />
     <breakpoint_rules converted="true" />
   </component>
+  <component name="DockManager">
+    <window id="3">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="RDBAction.java" pinned="false" current="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/io/github/mthli/EatWhat/Database/RDBAction.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state vertical-scroll-proportion="0.31343284" vertical-offset="30" max-vertical-offset="930">
+                    <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+                    <folding>
+                      <element signature="e#371#372#0" expanded="true" />
+                      <element signature="e#421#422#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="EatWhat" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="popup.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/popup.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.769231" vertical-offset="0" max-vertical-offset="615">
-              <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="popup_background.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/drawable/popup_background.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
-              <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/io/github/mthli/EatWhat/Main/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3313783" vertical-offset="1732" max-vertical-offset="2970">
-              <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.24390244" vertical-offset="1905" max-vertical-offset="3930">
+              <caret line="137" column="76" selection-start-line="137" selection-start-column="76" selection-end-line="137" selection-end-column="76" />
+              <folding>
+                <element signature="e#2126#2166#0" expanded="true" />
+                <element signature="e#2200#2239#0" expanded="true" />
+                <element signature="e#4900#4939#0" expanded="true" />
+                <element signature="e#5997#6036#0" expanded="true" />
+                <element signature="e#6510#6547#0" expanded="true" />
+                <element signature="e#7575#7614#0" expanded="true" />
+                <element signature="e#8555#8586#0" expanded="true" />
+                <element signature="e#10494#10534#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="915">
+              <caret line="45" column="65" selection-start-line="45" selection-start-column="65" selection-end-line="45" selection-end-column="65" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UDBAction.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/io/github/mthli/EatWhat/Database/UDBAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1575">
+              <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+              <folding>
+                <element signature="e#409#410#0" expanded="true" />
+                <element signature="e#459#460#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -163,9 +193,7 @@
         <option value="$PROJECT_DIR$/src/io/github/mthli/EatWhat/AddUsual/AddUsualActivity.java" />
         <option value="$PROJECT_DIR$/src/io/github/mthli/EatWhat/Usual/AddUsualActivity.java" />
         <option value="$PROJECT_DIR$/src/io/github/mthli/EatWhat/Database/UDBHelper.java" />
-        <option value="$PROJECT_DIR$/src/io/github/mthli/EatWhat/Database/RDBAction.java" />
         <option value="$PROJECT_DIR$/res/layout/usual.xml" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/src/io/github/mthli/EatWhat/Usual/AddActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/usual_dialog.xml" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
@@ -177,10 +205,12 @@
         <option value="$PROJECT_DIR$/src/io/github/mthli/EatWhat/Usual/UsualAdapter.java" />
         <option value="$PROJECT_DIR$/src/io/github/mthli/EatWhat/Database/UDBAction.java" />
         <option value="$PROJECT_DIR$/src/io/github/mthli/EatWhat/Usual/UsualActivity.java" />
-        <option value="$PROJECT_DIR$/src/io/github/mthli/EatWhat/Main/MainActivity.java" />
         <option value="$PROJECT_DIR$/res/drawable/shadow.xml" />
-        <option value="$PROJECT_DIR$/res/layout/popup.xml" />
         <option value="$PROJECT_DIR$/res/drawable/popup_background.xml" />
+        <option value="$PROJECT_DIR$/res/layout/popup.xml" />
+        <option value="$PROJECT_DIR$/src/io/github/mthli/EatWhat/Database/RDBAction.java" />
+        <option value="$PROJECT_DIR$/src/io/github/mthli/EatWhat/Main/MainActivity.java" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
       </list>
     </option>
   </component>
@@ -188,8 +218,8 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1366" />
-    <option name="height" value="770" />
+    <option name="width" value="683" />
+    <option name="height" value="768" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -677,7 +707,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="770" extended-state="6" />
+    <frame x="0" y="0" width="683" height="768" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -693,14 +723,14 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32724506" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.325723" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43987823" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43987823" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24960998" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15030211" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31045243" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32824427" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -736,7 +766,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2490">
           <caret line="127" column="13" selection-start-line="127" selection-start-column="13" selection-end-line="127" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#2126#2166#0" expanded="true" />
+            <element signature="e#2200#2239#0" expanded="true" />
+            <element signature="e#4900#4939#0" expanded="true" />
+            <element signature="e#5997#6036#0" expanded="true" />
+            <element signature="e#6510#6547#0" expanded="true" />
+            <element signature="e#7575#7614#0" expanded="true" />
+            <element signature="e#8555#8586#0" expanded="true" />
+            <element signature="e#10494#10534#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -752,7 +791,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1650">
           <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
-          <folding />
+          <folding>
+            <element signature="e#2126#2166#0" expanded="true" />
+            <element signature="e#2200#2239#0" expanded="true" />
+            <element signature="e#4900#4939#0" expanded="true" />
+            <element signature="e#5997#6036#0" expanded="true" />
+            <element signature="e#6510#6547#0" expanded="true" />
+            <element signature="e#7575#7614#0" expanded="true" />
+            <element signature="e#8555#8586#0" expanded="true" />
+            <element signature="e#10494#10534#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -895,29 +943,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="840">
-          <caret line="47" column="59" selection-start-line="47" selection-start-column="59" selection-end-line="47" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/io/github/mthli/EatWhat/Database/RDBAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="990">
-          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-          <folding>
-            <element signature="e#376#377#0" expanded="false" />
-            <element signature="e#426#427#0" expanded="false" />
-            <element signature="e#480#481#0" expanded="false" />
-            <element signature="e#542#543#0" expanded="false" />
-            <element signature="e#577#578#0" expanded="false" />
-            <element signature="e#610#611#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/GitHub/Codeview/src/io/github/mthli/Codeview/Main/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="528" max-vertical-offset="6360">
@@ -1037,14 +1062,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/io/github/mthli/EatWhat/Database/UDBAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="377" max-vertical-offset="1545">
-          <caret line="56" column="21" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/ic_launcher.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1111,14 +1128,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/io/github/mthli/EatWhat/Usual/UsualActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1857142" vertical-offset="558" max-vertical-offset="1995">
-          <caret line="95" column="11" selection-start-line="95" selection-start-column="11" selection-end-line="95" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/drawable/popup_background.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
@@ -1127,10 +1136,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-xxhdpi/ic_launcher.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/github/mthli/EatWhat/Usual/UsualActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="690" max-vertical-offset="1995">
+          <caret line="95" column="11" selection-start-line="95" selection-start-column="11" selection-end-line="95" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/popup.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.769231" vertical-offset="0" max-vertical-offset="615">
-          <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
+        <state vertical-scroll-proportion="-16.73077" vertical-offset="0" max-vertical-offset="585">
+          <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
           <folding />
         </state>
       </provider>
@@ -1138,16 +1160,50 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable-xxhdpi/ic_launcher.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/src/io/github/mthli/EatWhat/Database/RDBAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31343284" vertical-offset="30" max-vertical-offset="930">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding>
+            <element signature="e#371#372#0" expanded="true" />
+            <element signature="e#421#422#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="915">
+          <caret line="45" column="65" selection-start-line="45" selection-start-column="65" selection-end-line="45" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/github/mthli/EatWhat/Database/UDBAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1575">
+          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+          <folding>
+            <element signature="e#409#410#0" expanded="true" />
+            <element signature="e#459#460#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/io/github/mthli/EatWhat/Main/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3313783" vertical-offset="1732" max-vertical-offset="2970">
-          <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.24390244" vertical-offset="1905" max-vertical-offset="3930">
+          <caret line="137" column="76" selection-start-line="137" selection-start-column="76" selection-end-line="137" selection-end-column="76" />
+          <folding>
+            <element signature="e#2126#2166#0" expanded="true" />
+            <element signature="e#2200#2239#0" expanded="true" />
+            <element signature="e#4900#4939#0" expanded="true" />
+            <element signature="e#5997#6036#0" expanded="true" />
+            <element signature="e#6510#6547#0" expanded="true" />
+            <element signature="e#7575#7614#0" expanded="true" />
+            <element signature="e#8555#8586#0" expanded="true" />
+            <element signature="e#10494#10534#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

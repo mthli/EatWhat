@@ -17,16 +17,20 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.*;
-import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.PopupWindow;
+import android.widget.*;
 
-import android.widget.Toast;
 import io.github.mthli.EatWhat.About.AboutActivity;
+import io.github.mthli.EatWhat.Database.RDBAction;
+import io.github.mthli.EatWhat.Database.Restaurant;
+import io.github.mthli.EatWhat.Database.UDBAction;
+import io.github.mthli.EatWhat.Database.Usual;
 import io.github.mthli.EatWhat.Usual.UsualActivity;
 import io.github.mthli.EatWhat.R;
 
 import java.io.FileNotFoundException;
+import java.sql.SQLException;
+import java.util.List;
+import java.util.Random;
 
 public class MainActivity extends Activity implements SensorEventListener, ActionBar.OnNavigationListener {
     private ImageView background;
@@ -113,15 +117,75 @@ public class MainActivity extends Activity implements SensorEventListener, Actio
     public void onSensorChanged(SensorEvent sensorEvent) {
         int sensorType = sensorEvent.sensor.getType();
         float[] values= sensorEvent.values;
+        RDBAction rdbAction = new RDBAction(MainActivity.this);
+        UDBAction udbAction = new UDBAction(MainActivity.this);
 
         if (sensorType == Sensor.TYPE_ACCELEROMETER) {
             if ((Math.abs(values[0]) > 19) || Math.abs(values[1]) > 19 || Math.abs(values[2]) > 19){
                 if (popupWindow.isShowing()) {
                     popupWindow.dismiss();
                 }
-                /* Do something */
-                popupWindow.setAnimationStyle(R.style.popup_show);
-                popupWindow.showAtLocation(background, Gravity.CENTER, 0, 200);
+
+                int position = sharedPreferences.getInt("dropdown", 0);
+
+                if (position == 0) {
+                    try {
+                        rdbAction.openDatabase();
+                        List<Restaurant> restaurantList = rdbAction.restaurantList();
+                        if (restaurantList.size() == 0) {
+                            Toast.makeText(
+                                    MainActivity.this,
+                                    getString(R.string.error_database_open),
+                                    Toast.LENGTH_SHORT
+                            ).show();
+                        } else {
+                            Random random = new Random();
+                            int getRandom = random.nextInt(restaurantList.size());
+                            Restaurant restaurant = restaurantList.get(getRandom);
+                            TextView textView = (TextView) popupView.findViewById(R.id.popup_restaurant);
+                            textView.setText(restaurant.getRestaurant());
+                            textView = (TextView) popupView.findViewById(R.id.popup_path);
+                            textView.setText(restaurant.getPath());
+                            popupWindow.setAnimationStyle(R.style.popup_show);
+                            popupWindow.showAtLocation(background, Gravity.CENTER, 0, 200);
+                        }
+                    } catch (SQLException s) {
+                        Toast.makeText(
+                                MainActivity.this,
+                                getString(R.string.error_database_open),
+                                Toast.LENGTH_SHORT
+                        ).show();
+                    }
+                } else {
+                    try {
+                        udbAction.openDatabase(false);
+                        List<Usual> usualList = udbAction.usualList();
+                        if (usualList.size() == 0) {
+                            Toast.makeText(
+                                    MainActivity.this,
+                                    getString(R.string.warning_usual_404),
+                                    Toast.LENGTH_SHORT
+                            ).show();
+                        } else {
+                            Random random = new Random();
+                            int getRandom = random.nextInt(usualList.size());
+                            Usual usual = usualList.get(getRandom);
+                            TextView textView = (TextView) popupView.findViewById(R.id.popup_restaurant);
+                            textView.setText(usual.getRestaurant());
+                            textView = (TextView) popupView.findViewById(R.id.popup_path);
+                            textView.setText(usual.getPath());
+                            popupWindow.setAnimationStyle(R.style.popup_show);
+                            popupWindow.showAtLocation(background, Gravity.CENTER, 0, 200);
+                        }
+                    } catch (SQLException s) {
+                        Toast.makeText(
+                                MainActivity.this,
+                                getString(R.string.error_database_open),
+                                Toast.LENGTH_SHORT
+                        ).show();
+                    }
+                    udbAction.closeDatabase();
+                }
             }
         }
     }

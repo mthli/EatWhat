@@ -16,6 +16,9 @@
 
     <!-- Share -->
     <string name="share_title">Share</string>
+    <string name="share_restaurant">Restaurant:</string>
+    <string name="share_path">Path:</string>
+    <string name="share_last">via EatWhat</string>
 
     <!-- Add Usual -->
     <string name="usual_label">Usual</string>
@@ -44,6 +47,7 @@
 
     <!-- Warning -->
     <string name="waring_restaurant_void">Restaurant All Shutdown</string>
+    <string name="warning_share_void">You Need To Shake Your Phone First</string>
     <string name="warning_usual_404">You Need To Add Your Usual First</string>
 
     <!-- Error -->

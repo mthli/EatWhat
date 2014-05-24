@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App -->
+    <string name="app_name">吃神马</string>
+
+    <!-- Main -->
+    <string name="main_background_image">主背景图片</string>
+    
+    <!-- Menu -->
+    <string name="main_dropdown_random">随机</string>
+    <string name="main_dropdown_usual">常去</string>
+    <string name="main_menu_share">分享</string>
+    <string name="main_menu_background">自定义背景</string>
+    <string name="main_menu_usual">常去餐馆</string>
+    <string name="main_menu_about">关于</string>
+
+    <!-- Share -->
+    <string name="share_title">分享</string>
+    <string name="share_restaurant">今天我决定去</string>
+    <string name="share_path">吃</string>
+    <string name="share_last">via 吃神马</string>
+
+    <!-- Add Usual -->
+    <string name="usual_label">常去餐馆</string>
+    <string name="usual_edit_text_restaurant_hint">常去餐馆</string>
+    <string name="usual_edit_text_path_hint">地点</string>
+    <string name="usual_menu_add">添加</string>
+    <string name="usual_menu_delete">删除</string>
+    <string name="usual_dialog_title">添加</string>
+    <string name="usual_dialog_confirm">确认</string>
+    <string name="usual_dialog_cancel">取消</string>
+    <string name="usual_dialog_restaurant">常去餐馆</string>
+    <string name="usual_dialog_path">地点</string>
+
+    <!-- About -->
+    <string name="about_label">关于</string>
+    <string name="about_title_author">作者</string>
+    <string name="about_title_thanks">感谢</string>
+    <string name="about_title_version">版本</string>
+    <string name="about_title_homepage">主页</string>
+    <string name="about_title_license">协议</string>
+    <string name="about_content_author">李明亮 @mth_li</string>
+    <string name="about_content_thanks">小型スーパーメンw @zfh_kiki</string>
+    <string name="about_content_version">1.0.0</string>
+    <string name="about_content_homepage">https://github.com/mthli/EatWhat</string>
+    <string name="about_content_license">Mozilla Public License Version 2.0</string>
+
+    <!-- Warning -->
+    <string name="waring_restaurant_void">餐馆都倒闭了</string>
+    <string name="warning_share_void">首先请摇一摇你的手机</string>
+    <string name="warning_usual_404">首先请添加常去餐馆</string>
+
+    <!-- Error -->
+    <string name="error_unknown">有一只虫子</string>
+    <string name="error_background_init">自定义的背景图片找不到了，恢复默认设置</string>
+    <string name="error_background_404">找不到图片呢</string>
+    <string name="error_database_copy">初始化数据库失败</string>
+    <string name="error_database_open">数据库打开失败</string>
+    
+</resources>

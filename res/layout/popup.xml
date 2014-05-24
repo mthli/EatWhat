@@ -15,7 +15,7 @@
               android:paddingRight="15dp"
               android:paddingTop="10dp"
               android:textSize="30sp"
-              android:textColor="#FFFFFF"
+              android:textColor="#2B2B2B"
               android:maxLines="2">
     </TextView>
 
@@ -27,7 +27,7 @@
               android:paddingRight="15dp"
               android:paddingBottom="10dp"
               android:textSize="15sp"
-              android:textColor="#FFFFFF"
+              android:textColor="#2B2B2B"
               android:maxLines="2">
     </TextView>
 

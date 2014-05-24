@@ -238,9 +238,27 @@ public class MainActivity extends Activity implements SensorEventListener, Actio
                 intent_share.setType("text/plain");
                 intent_share.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.share_title));
                 /* Do something */
-                intent_share.putExtra(Intent.EXTRA_TEXT, "dhusga");
-                startActivity(Intent.createChooser(intent_share, "Share"));
-                break;
+                TextView textView = (TextView) popupView.findViewById(R.id.popup_restaurant);
+                CharSequence getRestaurant = textView.getText();
+                textView = (TextView) popupView.findViewById(R.id.popup_path);
+                CharSequence getPath = textView.getText();
+                if (getRestaurant.length() == 0 && getPath.length() == 0) {
+                    Toast.makeText(
+                            MainActivity.this,
+                            getString(R.string.warning_share_void),
+                            Toast.LENGTH_SHORT
+                    ).show();
+                    break;
+                } else {
+                    String share = getString(R.string.share_restaurant)
+                            + getRestaurant
+                            + getString(R.string.share_path)
+                            + getPath + " " //Dirty
+                            + getString(R.string.share_last);
+                    intent_share.putExtra(Intent.EXTRA_TEXT, share);
+                    startActivity(Intent.createChooser(intent_share, "Share"));
+                    break;
+                }
             case R.id.main_menu_background:
                 Intent intent_background = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                 intent_background.setType("image/*");

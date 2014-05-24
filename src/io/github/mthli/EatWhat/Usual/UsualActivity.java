@@ -33,6 +33,7 @@ public class UsualActivity extends Activity {
         listView = (ListView) findViewById(R.id.usual);
         listView.setAdapter(usualAdapter);
         usualAdapter.notifyDataSetChanged();
+
     }
 
     @Override

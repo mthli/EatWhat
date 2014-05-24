@@ -39,8 +39,8 @@ public class UDBAction {
     public void deleteUsual(Usual usual) {
         database.delete(
                 Usual.TABLE,
-                Usual.RESTAURANT + "=?",
-                new String[] {usual.getRestaurant()}
+                Usual.RESTAURANT + " =?" + " AND " + Usual.PATH + " =?",
+                new String[] {usual.getRestaurant(), usual.getPath()}
         );
     }
 

@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.*;
 import io.github.mthli.EatWhat.Database.UDBAction;
 import io.github.mthli.EatWhat.Database.Usual;
@@ -16,9 +15,7 @@ import io.github.mthli.EatWhat.R;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class UsualActivity extends Activity {
     private ListView listView;
@@ -31,6 +28,7 @@ public class UsualActivity extends Activity {
         setContentView(R.layout.usual);
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
+        usualItems = new ArrayList<UsualItem>();
         refreshList();
         listView = (ListView) findViewById(R.id.usual);
         listView.setAdapter(usualAdapter);
@@ -102,12 +100,11 @@ public class UsualActivity extends Activity {
     }
 
     public void refreshList() {
+        usualItems.clear();
         UDBAction udbAction = new UDBAction(UsualActivity.this);
         try {
-            usualItems.clear();
             udbAction.openDatabase(true);
             List<Usual> usualList = udbAction.usualList();
-
 
             for (int i = 0; i < usualList.size(); i++) {
                 usualItems.add(

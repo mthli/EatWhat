@@ -8,8 +8,6 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
-import io.github.mthli.EatWhat.Database.Usual;
 import io.github.mthli.EatWhat.R;
 
 import java.util.List;

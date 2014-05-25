@@ -22,6 +22,7 @@ public class AboutActivity extends Activity {
         ArrayList<String> title = new ArrayList<String>();
         title.add(getString(R.string.about_title_author));
         title.add(getString(R.string.about_title_thanks));
+        title.add(getString(R.string.about_title_recruit));
         title.add(getString(R.string.about_title_version));
         title.add(getString(R.string.about_title_homepage));
         title.add(getString(R.string.about_title_license));
@@ -29,12 +30,13 @@ public class AboutActivity extends Activity {
         ArrayList<String> content = new ArrayList<String>();
         content.add(getString(R.string.about_content_author));
         content.add(getString(R.string.about_content_thanks));
+        content.add(getString(R.string.about_content_recruit));
         content.add(getString(R.string.about_content_version));
         content.add(getString(R.string.about_content_homepage));
         content.add(getString(R.string.about_content_license));
 
         List<Map<String, String>> lists = new ArrayList<Map<String, String>>();
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 6; i++) {
             Map<String, String> list = new HashMap<String, String>();
             list.put("title", title.get(i));
             list.put("content", content.get(i));

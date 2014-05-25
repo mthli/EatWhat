@@ -2,6 +2,7 @@ package io.github.mthli.EatWhat.Database;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class RDBHelper extends SQLiteOpenHelper {
@@ -19,7 +20,11 @@ public class RDBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase database) {
-        database.execSQL(Restaurant.CREATE_SQL);
+        try {
+            database.execSQL(Restaurant.CREATE_SQL);
+        } catch (SQLiteException s) {
+            /* Do something */
+        }
     }
 
     @Override

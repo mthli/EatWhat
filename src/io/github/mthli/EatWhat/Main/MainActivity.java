@@ -42,6 +42,7 @@ public class MainActivity extends Activity implements SensorEventListener, Actio
 
     private SensorManager sensorManager;
     private SoundPool soundPool;
+    private int soundID;
 
     private PopupWindow popupWindow;
     private View popupView;
@@ -112,6 +113,7 @@ public class MainActivity extends Activity implements SensorEventListener, Actio
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         /* Do something */
         soundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 5);
+        soundID = soundPool.load(this, R.raw.dang, 1);
     }
 
     @Override
@@ -176,6 +178,7 @@ public class MainActivity extends Activity implements SensorEventListener, Actio
                             textView = (TextView) popupView.findViewById(R.id.popup_path);
                             textView.setText(restaurant.getPath());
                             popupWindow.setAnimationStyle(R.style.popup_show);
+                            soundPool.play(soundID, 1, 1, 0, 0, 1);
                             popupWindow.showAtLocation(background, Gravity.CENTER, 0, 200);
                         }
                     } catch (SQLException s) {
@@ -204,6 +207,7 @@ public class MainActivity extends Activity implements SensorEventListener, Actio
                             textView = (TextView) popupView.findViewById(R.id.popup_path);
                             textView.setText(usual.getPath());
                             popupWindow.setAnimationStyle(R.style.popup_show);
+                            soundPool.play(soundID, 1, 1, 0, 0, 1);
                             popupWindow.showAtLocation(background, Gravity.CENTER, 0, 200);
                         }
                     } catch (SQLException s) {
